@@ -3,7 +3,7 @@
   <ul>
     <li>I'm Dwep</li>
     <li>Backend Developer</li>
-    <li>22 years old</li>
+    <li>23 years old</li>
   </ul>
   <h1>Languages & Tools</h1>
   <div style="display: flex; gap: 15px; flex-wrap: wrap;">
