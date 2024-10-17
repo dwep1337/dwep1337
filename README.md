@@ -5,6 +5,7 @@
     <li>Backend Developer</li>
     <li>23 years old</li>
   </ul>
+
   <h1>Languages & Tools</h1>
   <div style="display: flex; gap: 15px; flex-wrap: wrap;">
     <img src="https://skillicons.dev/icons?i=lua" alt="Lua" title="Lua" width="60" height="60"/>
