@@ -1,7 +1,7 @@
 <div style="text-align: left; margin-top: 20px;">
   <h1>About</h1>
   <ul>
-    <li>I'm Dwep</li>
+    <li>I'm Anderson Henrique</li>
     <li>Backend Developer</li>
     <li>23 years old</li>
     <li>Brazil</li>
