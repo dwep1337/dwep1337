@@ -1,4 +1,7 @@
 ```java
+import java.util.List;
+import java.util.Map;
+
 public class AboutMe {
 
     public String getName() {
@@ -13,26 +16,29 @@ public class AboutMe {
         return "Brazil";
     }
 
-     public String getEducation() {
+    public String getPronouns() {
+        return "he/him";
+    }
+
+    public String getEducation() {
         return "Undergraduate Student in Analysis and Systems Development (ADS)";
     }
 
     public String getGoal() {
-        return "Become a proficient Java Backend Developer";
+        return "Become a proficient Java Backend Developer and contribute to open-source projects";
     }
 
-    public List<String> getSkills() {
-        return List.of(
-            "Java",
-            "Spring Boot",
-            "TypeScript",
-            "Node.js",
-            "NestJS",
-            "SQL (MySQL, PostgreSQL)",
-            "MongoDB",
-            "RabbitMQ",
-            "Docker",
-            "Git"
+    public String getYearsOfExperience() {
+        return "3+ years";
+    }
+
+    public Map<String, List<String>> getTechnicalSkills() {
+        return Map.of(
+            "Languages", List.of("Java", "TypeScript", "JavaScript", "SQL"),
+            "Frameworks", List.of("Spring Boot", "NestJS", "Node.js", "Hibernate"),
+            "Databases", List.of("MySQL", "PostgreSQL", "MongoDB"),
+            "DevOps & Cloud", List.of("Docker", "RabbitMQ", "AWS (Learning)"),
+            "Other", List.of("Git", "REST APIs", "Microservices", "OOP")
         );
     }
 
@@ -42,24 +48,54 @@ public class AboutMe {
             "VSCode",
             "Postman",
             "Docker",
-            "Git",
+            "Git/GitHub",
             "RabbitMQ",
             "Linux (Manjaro, Ubuntu, Fedora)"
         );
     }
 
-    public List<String> getHobbies() {
-        return List.of(
-            "Coding",
-            "Gaming",
-            "Learning new technologies",
-            "Exploring Linux distros"
+    public Map<String, List<String>> getInterests() {
+        return Map.of(
+            "Professional Interests", List.of(
+                "Backend Architecture",
+                "Performance Optimization",
+                "Clean Code",
+                "Design Patterns"
+            ),
+            "Personal Hobbies", List.of(
+                "Coding personal projects",
+                "Gaming",
+                "Learning new technologies",
+                "Exploring Linux distros",
+                "Open-source contributions"
+            )
         );
     }
 
-    public String getContact() {
-        return "📫 dwepdeveloper@outlook.com";
+    public Map<String, String> getContacts() {
+        return Map.of(
+            "Email", "dwepdeveloper@outlook.com",
+            "LinkedIn", "https://www.linkedin.com/in/anderson-h/"
+        );
+    }
+
+    public List<String> getCurrentFocus() {
+        return List.of(
+            "Deepening Spring Boot knowledge",
+            "Improving system design skills"
+        );
+    }
+
+    @Override
+    public String toString() {
+        return String.format("""
+            About %s:
+            Role: %s
+            Location: %s
+            Education: %s
+            Goal: %s
+            """, 
+            getName(), getRole(), getLocation(), getEducation(), getGoal());
     }
 }
-
 ```
