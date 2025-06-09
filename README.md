@@ -13,6 +13,10 @@ public class AboutMe {
         return "Brazil";
     }
 
+     public String getEducation() {
+        return "Undergraduate Student in Analysis and Systems Development (ADS)";
+    }
+
     public String getGoal() {
         return "Become a proficient Java Backend Developer";
     }
