@@ -2,7 +2,7 @@
 public class AboutMe {
 
     public String getName() {
-        return "Anderson (Dwep)";
+        return "Anderson Henrique (Dwep)";
     }
 
     public String getRole() {
