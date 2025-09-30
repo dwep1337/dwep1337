@@ -16,12 +16,8 @@ public class AboutMe {
         return "Brazil";
     }
 
-    public String getPronouns() {
-        return "he/him";
-    }
-
     public String getEducation() {
-        return "Undergraduate Student in Analysis and Systems Development (ADS)";
+        return "Undergraduate in Analysis and Systems Development (ADS)";
     }
 
     public String getGoal() {
@@ -37,38 +33,19 @@ public class AboutMe {
             "Languages", List.of("Java", "TypeScript", "JavaScript", "SQL"),
             "Frameworks", List.of("Spring Boot", "NestJS", "Node.js", "Hibernate"),
             "Databases", List.of("MySQL", "PostgreSQL", "MongoDB"),
-            "DevOps & Cloud", List.of("Docker", "RabbitMQ", "AWS (Learning)"),
+            "DevOps & Cloud", List.of("Docker", "RabbitMQ", "AWS"),
             "Other", List.of("Git", "REST APIs", "Microservices", "OOP")
         );
     }
 
     public List<String> getTools() {
-        return List.of(
-            "IntelliJ IDEA",
-            "VSCode",
-            "Postman",
-            "Docker",
-            "Git/GitHub",
-            "RabbitMQ",
-            "Linux (Manjaro, Ubuntu, Fedora)"
-        );
+        return List.of("IntelliJ IDEA", "VSCode", "Postman", "Docker", "Git/GitHub", "RabbitMQ", "Linux");
     }
 
     public Map<String, List<String>> getInterests() {
         return Map.of(
-            "Professional Interests", List.of(
-                "Backend Architecture",
-                "Performance Optimization",
-                "Clean Code",
-                "Design Patterns"
-            ),
-            "Personal Hobbies", List.of(
-                "Coding personal projects",
-                "Gaming",
-                "Learning new technologies",
-                "Exploring Linux distros",
-                "Open-source contributions"
-            )
+            "Professional", List.of("Backend Architecture", "Performance Optimization", "Clean Code"),
+            "Personal", List.of("Coding", "Gaming", "Linux distros", "Open-source")
         );
     }
 
@@ -80,17 +57,13 @@ public class AboutMe {
     }
 
     public List<String> getCurrentFocus() {
-        return List.of(
-            "Deepening Spring Boot knowledge",
-            "Improving system design skills"
-        );
+        return List.of("Deepening Spring Boot", "Improving system design");
     }
 
     @Override
     public String toString() {
         return String.format("""
-            About %s:
-            Role: %s
+            %s - %s (Backend Developer)
             Location: %s
             Education: %s
             Goal: %s
@@ -98,4 +71,5 @@ public class AboutMe {
             getName(), getRole(), getLocation(), getEducation(), getGoal());
     }
 }
+
 ```
