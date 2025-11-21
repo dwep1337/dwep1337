@@ -1,5 +1,5 @@
 ```typescript
-type TechStack = string[];
+type TechStack = readonly string[];
 
 interface IAboutMe {
   name: string;
@@ -12,13 +12,13 @@ interface IAboutMe {
 }
 
 class AboutMe implements IAboutMe {
-  name = "Anderson Henrique (Dwep)";
-  role = "Backend Developer";
-  focus = "TypeScript, Java, PHP";
-  experience = "3+ years";
-  location = "Brazil";
+  public readonly name = "Anderson Henrique (Dwep)";
+  public readonly role = "Backend Developer";
+  public readonly focus = "TypeScript, Java, PHP";
+  public readonly experience = "3+ years";
+  public readonly location = "Brazil";
 
-  stack: TechStack = [
+  public readonly stack: TechStack = [
     "Node.js (NestJS, Express, Fastify)",
     "Java (Spring Boot)",
     "PHP"
@@ -28,7 +28,7 @@ class AboutMe implements IAboutMe {
     return this.stack[0];
   }
 
-  toString(): string {
+  public toString(): string {
     return `
         ${this.name} — ${this.role}
         Focus: ${this.focus}
