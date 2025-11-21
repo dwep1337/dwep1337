@@ -1,60 +1,44 @@
-```java
-public class AboutMe {
+```typescript
+type TechStack = string[];
 
-    public String name() {
-        return "Anderson Henrique (Dwep)";
-    }
-
-    public String role() {
-        return "Backend Developer";
-    }
-
-    public String location() {
-        return "Brazil";
-    }
-
-    public String experience() {
-        return "3+ years";
-    }
-
-    public String focus() {
-        return "Java & Node.js (TypeScript)";
-    }
-
-    public String goal() {
-        return "Become a proficient Java Backend Developer";
-    }
-
-    public String stack() {
-        return "Spring Boot, NestJS, Express, Fastify";
-    }
-
-    public String databases() {
-        return "MySQL, PostgreSQL, SQLite, MongoDB";
-    }
-
-    public String tools() {
-        return "Linux, Docker, Git, VSCode, IntelliJ IDEA";
-    }
-
-    @Override
-    public String toString() {
-        return String.format("""
-            %s — %s
-            Location: %s
-            Experience: %s
-            Focus: %s
-            Stack: %s
-            Databases: %s
-            Tools: %s
-            Goal: %s
-            """,
-            name(), role(), location(), experience(), focus(), stack(), databases(), tools(), goal());
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new AboutMe());
-    }
+interface IAboutMe {
+  name: string;
+  role: string;
+  focus: string;
+  experience: string;
+  location: string;
+  stack: TechStack;
+  toString(): string;
 }
 
+class AboutMe implements IAboutMe {
+  name = "Anderson Henrique (Dwep)";
+  role = "Backend Developer";
+  focus = "TypeScript, Java, PHP";
+  experience = "3+ years";
+  location = "Brazil";
+
+  stack: TechStack = [
+    "Node.js (NestJS, Express, Fastify)",
+    "Java (Spring Boot)",
+    "PHP"
+  ];
+
+  get mainStack(): string {
+    return this.stack[0];
+  }
+
+  toString(): string {
+    return `
+        ${this.name} — ${this.role}
+        Focus: ${this.focus}
+        Experience: ${this.experience}
+        Location: ${this.location}
+        Stack: ${this.stack.join(", ")}
+        Main Stack: ${this.mainStack}
+    `;
+  }
+}
+
+console.log(new AboutMe().toString());
 ```
