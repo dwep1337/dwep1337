@@ -28,7 +28,7 @@ class AboutMe implements IAboutMe {
     return this.stack[0];
   }
 
-  public toString(): string {
+  public show(): string {
     return `
         ${this.name} — ${this.role}
         Focus: ${this.focus}
