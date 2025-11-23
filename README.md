@@ -8,7 +8,7 @@ interface IAboutMe {
   experience: string;
   location: string;
   stack: TechStack;
-  toString(): string;
+  show(): string;
 }
 
 class AboutMe implements IAboutMe {
@@ -40,5 +40,5 @@ class AboutMe implements IAboutMe {
   }
 }
 
-console.log(new AboutMe().toString());
+console.log(new AboutMe().show());
 ```
